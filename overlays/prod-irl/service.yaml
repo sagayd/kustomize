@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: dashboard-svc
-  annotations:
-    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:630728872373:certificate/9146e44c-9971-4618-b4cb-397dcfe42ad7
-    external-dns.alpha.kubernetes.io/hostname: dashboard.irl.prod.wahed.tech

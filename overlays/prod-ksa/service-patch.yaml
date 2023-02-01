@@ -1,6 +1,0 @@
-- op: add
-  path: "/metadata/annotations/external-dns.alpha.kubernetes.io~1hostname"
-  value: "dashboard.ksa.prod.wahed.tech"
-- op: remove
-  path: "/metadata/annotations/service.beta.kubernetes.io~1aws-load-balancer-backend-protocol"
-  value: "http"

@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: dashboard-service-config
-data:
-  elastic.url: http://elastic-es-http.elastic-system.svc.cluster.local:9200
-  s3.region: "me-jeddah-1"
-  s3.forceS3PathStyle: "true"
-  s3.endpoint: "https://axldthpaiqqr.compat.objectstorage.me-jeddah-1.oraclecloud.com"

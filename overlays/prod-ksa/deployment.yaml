@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard-svc
+spec:
+  template:
+    spec:
+      containers:
+        - name: dashboard-svc
+          env:
+            - name: S3_FORCES3PATHSTYLE
+              valueFrom:
+                configMapKeyRef:
+                  key: s3.forceS3PathStyle
+                  name: dashboard-service-config
+            - name: S3_ENDPOINT
+              valueFrom:
+                configMapKeyRef:
+                  key: s3.endpoint
+                  name: dashboard-service-config
+            - name: S3_SECRETKEY
+              valueFrom:
+                secretKeyRef:
+                  name: oci
+                  key: secret_access_key
+            - name: S3_ACCESSKEYID
+              valueFrom:
+                secretKeyRef:
+                  name: oci
+                  key: access_key_id

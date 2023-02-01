@@ -1,0 +1,16 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: dashboard-https
+  namespace: wahed
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`dashboard.ksa.prod.wahed.tech`)
+      kind: Rule
+      services:
+        - name: dashboard-svc
+          port: 8080
+  tls:
+    secretName: letsencrypt-dashboard

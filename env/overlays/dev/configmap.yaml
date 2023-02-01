@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  elastic.url: https://9ee5cb1cea38412083af1817ab12dcd6.eu-west-1.aws.found.io:9243
+  s3.region: eu-west-1
+kind: ConfigMap
+metadata:
+  name: robo-overview-service-config
